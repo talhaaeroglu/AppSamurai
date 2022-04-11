@@ -45,9 +45,12 @@ def json_cost_calculator(obj, num):
 
 
 if __name__ == "__main__":
-    sample1 = json.loads(requests.get("https://prod-storyly-media.s3.eu-west-1.amazonaws.com/test-scenarios/sample_1.json").content)
-    sample2 = json.loads(requests.get("https://prod-storyly-media.s3.eu-west-1.amazonaws.com/test-scenarios/sample_2.json").content)
-    sample3 = json.loads(requests.get("https://prod-storyly-media.s3.eu-west-1.amazonaws.com/test-scenarios/sample_3.json").content)
+    sample1 = json.loads(
+        requests.get("https://prod-storyly-media.s3.eu-west-1.amazonaws.com/test-scenarios/sample_1.json").content)
+    sample2 = json.loads(
+        requests.get("https://prod-storyly-media.s3.eu-west-1.amazonaws.com/test-scenarios/sample_2.json").content)
+    sample3 = json.loads(
+        requests.get("https://prod-storyly-media.s3.eu-west-1.amazonaws.com/test-scenarios/sample_3.json").content)
     print(json_cost_calculator(sample1, 1))
     print(json_cost_calculator(sample2, 2))
     print(json_cost_calculator(sample3, 3))
